@@ -37,3 +37,14 @@ if we were to open the view developer tools, we'd find both instances appearing.
 we have two unique instances of view. Even though they have similar names in the data object, they're completely isolated from one another
 if we were to open the view developer tools, we'd find both instances appearing.
 typically you will have a single application on any given page.
+
+<h1>with proxy</h1>
+    this feature keeps your code readable and straightforward.
+    The purpose of this to make it convenient for you, the developer proxy, It's afeature built into vue, That the reasons why developers love you so much 
+    we can access the data directly from the object rather than access it through the dollar sign data object Vue is capable of calling the correct functions that are access or update the data.
+
+<h1>without proxy<h1>
+    will return the last name from the data object
+    The problem with this approach is that we have to type quite a bit of code to get the data. It isn't that annoying, but it can be simplified
+    The use simplifies the code you have to write by creating proxy getters and setters.
+    There immediately functions that will take care of grabbing or updating the actual data.
