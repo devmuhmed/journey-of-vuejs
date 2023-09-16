@@ -22,3 +22,12 @@ we can verify if you is active by taking a look at the view panel inside the dev
 The root component refers to the element that's being controlled on the page
 
 in the next lecture we'll begin making our application more dynamic
+
+adding some data 
+data is an integral part of any application
+data can be rendered onto the page like username or profile picture
+vue enable us to use expressions in the document
+expression can't be used outside of the template
+template would be the element we selected in the mount function 
+you have to set your data from within the vue instance any outside code will be ignored.
+There will be times where we'll have data that we won't want to render on the template.
