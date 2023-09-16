@@ -7,13 +7,15 @@
 </head>
 <body>
     
-    <div id="app">
-        {{ 2 + 2 }}<br/> 
-        {{ firstName }} {{ lastName }} 
-        {{ lastNameDirect }}
-    </div>
-    <!-- {{ firstName }} -->
-    <!-- some countries has issue with links -->
+    <div class="app"> 
+        {{ firstName }} 
+        {{ lastName }}
+    </div> <!-- => return John Hassan -->
+    <div class="app"> 
+        {{ firstName }} 
+        {{ lastName }}
+    </div> <!-- => return {{ firstName }} {{ lastName }} -->
+    
     <script src="js/vue3cdn.js"></script>
     <script src="js/app.js"></script>
 </body>
