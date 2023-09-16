@@ -31,3 +31,9 @@ expression can't be used outside of the template
 template would be the element we selected in the mount function 
 you have to set your data from within the vue instance any outside code will be ignored.
 There will be times where we'll have data that we won't want to render on the template.
+
+The first name and last name properties are unique to each instance.
+if we were to open the view developer tools, we'd find both instances appearing.
+we have two unique instances of view. Even though they have similar names in the data object, they're completely isolated from one another
+if we were to open the view developer tools, we'd find both instances appearing.
+typically you will have a single application on any given page.
