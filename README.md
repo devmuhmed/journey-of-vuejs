@@ -48,3 +48,6 @@ typically you will have a single application on any given page.
     The problem with this approach is that we have to type quite a bit of code to get the data. It isn't that annoying, but it can be simplified
     The use simplifies the code you have to write by creating proxy getters and setters.
     There immediately functions that will take care of grabbing or updating the actual data.
+
+The app we built displays the full name on the page inside the code, We're using two expressions to accomplish this It would be nice if we could make it into one expression. without updating the data object to hold the full name .
+we can do it with this valid expression {{ `${firstName}` }}. we're free to call functions or use arithmetic operations from within 

@@ -8,8 +8,7 @@
 <body>
     
     <div id="app1"> 
-        {{ firstName }} 
-        {{ lastName }}
+        {{ `${firstName} ${lastName.toUpperCase()}` }}
     </div>
     
     <script src="js/vue3cdn.js"></script>
