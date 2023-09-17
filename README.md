@@ -1,7 +1,7 @@
 # journey-of-vuejs
 Complete Vue Developer 2023 Zero to the Mastery
 
-#To get statrted with Vue
+<h1>To get statrted with Vue</h1>
 we need to load it in adding a script tag to the document
 like this     
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -38,17 +38,18 @@ we have two unique instances of view. Even though they have similar names in the
 if we were to open the view developer tools, we'd find both instances appearing.
 typically you will have a single application on any given page.
 
-<h1>with proxy</h1>
+<h1>With Proxy</h1>
     this feature keeps your code readable and straightforward.
     The purpose of this to make it convenient for you, the developer proxy, It's afeature built into vue, That the reasons why developers love you so much 
     we can access the data directly from the object rather than access it through the dollar sign data object Vue is capable of calling the correct functions that are access or update the data.
 
-<h1>without proxy<h1>
+<h1>Without Proxy</h1>
     will return the last name from the data object
     The problem with this approach is that we have to type quite a bit of code to get the data. It isn't that annoying, but it can be simplified
     The use simplifies the code you have to write by creating proxy getters and setters.
     There immediately functions that will take care of grabbing or updating the actual data.
 
+<h1>Methods</h1>
 The app we built displays the full name on the page inside the code, We're using two expressions to accomplish this It would be nice if we could make it into one expression. without updating the data object to hold the full name .
 we can do it with this valid expression {{ `${firstName}` }}. we're free to call functions or use arithmetic operations from within 
 
