@@ -51,3 +51,5 @@ typically you will have a single application on any given page.
 
 The app we built displays the full name on the page inside the code, We're using two expressions to accomplish this It would be nice if we could make it into one expression. without updating the data object to hold the full name .
 we can do it with this valid expression {{ `${firstName}` }}. we're free to call functions or use arithmetic operations from within 
+
+if you would like to use the functions inside the vue instance you can access them via the this keyword, Since we're storing the instance in the variable methods are also accessible through the variable that
