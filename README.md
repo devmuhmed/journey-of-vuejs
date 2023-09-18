@@ -69,3 +69,8 @@ how do we tie these input fields to the data ?
 the answer to that question is with directives vue perrin's directives for linking the data inside the input fields to the data inside your vue instance.
 The value that gets evaluated from the expression is what will be used as the value for the input field. because of using v-model we will keep track of changes to the input field.if a change occurs, it'll update the data in our application. The data it updates depends on the value we use for the directive.
 
+In some cases, you may want to have dynamic attributes, I'm not talking about directives, but actual HTML attributes with dynamic values
+Luckily, you don't have to memorize 20 different directives for every attribute there is.
+Before the ref attribute, we're going to add a directive called v-bind:href or a short hand :href  attribute to have a dynamic value. You can apply this to any attribute by adding it before the attribute
+
+The Colon will act as a separator between the directive and attribute by adding the vines directive to an attribute, you will process the value as an expression.
