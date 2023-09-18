@@ -97,3 +97,5 @@ the difference being is that we can do more during the process if we need such c
 
 otherwise, these two do the exact same thing.
 he recommend using the v-model directive whenever possible because it means writing less code.
+
+Event modifiers can be used by used by adding a dot after the event name this dot is followed by the modifier this dot is followed by the modifier you'd like to use. I want to stop the default behavior of the event vue comes with an event modifier called prevent.
