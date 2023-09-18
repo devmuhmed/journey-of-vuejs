@@ -82,3 +82,18 @@ Your data will most likely come from an external source such as a database or AP
 
 if those sources are compromised, your application will most likely face issues to. Before we go any deeper into this topic, let's learn how to output raw HTML, previously we inserted alink into the template with Namiki URL. Let's recreate this.
 If you're developing on the back end, make sure you're sanitizing and escaping any HTML that goes in and out, our dury as front end developers is to escape characters. View helps us with that. secondly, make sure you trust the source of your data.
+
+<h1>Listening to Events</h1>
+we can liten for events by using directives inside the app js file. Let's create a new data property called Age.
+The name of the event it will listen to needs to be added after the directive like the v bind directive, we must add a colon followed by the name of the event.
+
+@click listen for events with this shorthand method for the rest of this course, we'll be using the shorthand
+
+V-model directive is a combination of binding and using events in vue
+the difference being is that we can do more during the process if we need such control
+
+<input type="text" id="first-name" v-model="firstName">
+<button type="button" @click="age--">Decrement</button>
+
+otherwise, these two do the exact same thing.
+he recommend using the v-model directive whenever possible because it means writing less code.

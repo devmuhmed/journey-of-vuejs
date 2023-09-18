@@ -13,13 +13,16 @@
         <p><a v-bind:href="url" target="_blank">Google</a></p>
         <!-- <p> {{ raw_url }}</p> => not work  -->
         <p v-html="raw_url"></p>
+        <p>{{ age }}</p>
         <hr>
         
         <label for="first-name">First Name</label>
         <input type="text" id="first-name" v-model="firstName">
         
         <label for="last-name">Last Name</label>
-        <input type="text" id="last-name"  v-model="lastName">
+        <input type="text" id="last-name"  :value="lastName" @input="upadteLastName">
+        <button type="button" v-on:click="increment">Increment</button>
+        <button type="button" @click="age--">Decrement</button>
     </div>
     
     <script src="js/vue3cdn.js"></script>
