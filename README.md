@@ -54,3 +54,18 @@ The app we built displays the full name on the page inside the code, We're using
 we can do it with this valid expression {{ `${firstName}` }}. we're free to call functions or use arithmetic operations from within 
 
 if you would like to use the functions inside the vue instance you can access them via the this keyword, Since we're storing the instance in the variable methods are also accessible through the variable that
+
+<h1>Directives</h1>
+
+directives are attributes that change the behavior of the element it's applied to.
+Vue comes with a few built-in directives You even have the option to create your own
+v-cloak to the browser, this is an attribute, but to vue this is a directive, unlike attributes, directives change how an element behaves
+this behavior can be anything from changing the color to removing an element. All directives start with the "V", followed by the name of the directive.Directives can have experssions of values, but the one we're using doesn't require one(v-cloak).
+
+the browser will identify this as an attribute, even though it's a directive in vue XYZ, we can use CSS to select this as an attribute and hide the elements open access file [v-cloak] {display: none ;} on css file.
+make sure you have throttling turned on while the pages loading the expression isn't appearing as plain text the page has finished loading, the name is rendered onto the document 
+
+how do we tie these input fields to the data ?
+the answer to that question is with directives vue perrin's directives for linking the data inside the input fields to the data inside your vue instance.
+The value that gets evaluated from the expression is what will be used as the value for the input field. because of using v-model we will keep track of changes to the input field.if a change occurs, it'll update the data in our application. The data it updates depends on the value we use for the directive.
+

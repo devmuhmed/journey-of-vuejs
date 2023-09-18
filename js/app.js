@@ -15,9 +15,9 @@ const vm = Vue.createApp({
 
 // Accessing the insatance data
 // with aproxy
-setTimeout(()=> {
-    // proxy
-    vm.firstName = 'Muhamed'
-    // without proxy
-    vm.$data.lastName = 'Ibrahim'
-},2000)
+// setTimeout(()=> {
+//     // proxy
+//     vm.firstName = 'Muhamed'
+//     // without proxy
+//     vm.$data.lastName = 'Ibrahim'
+// },2000)

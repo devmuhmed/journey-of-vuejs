@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     
-    <div id="app1"> 
-        {{ fullName() }}
+    <div id="app1" v-cloak> 
+        <p> {{ fullName() }} </p>
+        <hr>
+        
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" v-model="firstName">
+        
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name"  v-model="lastName">
     </div>
     
     <script src="js/vue3cdn.js"></script>
