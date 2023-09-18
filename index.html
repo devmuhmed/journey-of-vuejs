@@ -19,10 +19,13 @@
         <label for="first-name">First Name</label>
         <input type="text" id="first-name" v-model="firstName">
         
+        <label for="middle-name">Middle Name</label>
+        <input type="text" id="middle-name" @keyup.enter="updateMiddleName">
+        
         <label for="last-name">Last Name</label>
         <input type="text" id="last-name"  :value="lastName" @input.prevent="updateLastName('last name event triggered!', $event)">
         <button type="button" v-on:click="increment">Increment</button>
-        <button type="button" @click="age--">Decrement</button>
+        <button type="button" @click.ctrl="age--">Decrement</button>
     </div>
     
     <script src="js/vue3cdn.js"></script>
