@@ -74,3 +74,11 @@ Luckily, you don't have to memorize 20 different directives for every attribute 
 Before the ref attribute, we're going to add a directive called v-bind:href or a short hand :href  attribute to have a dynamic value. You can apply this to any attribute by adding it before the attribute
 
 The Colon will act as a separator between the directive and attribute by adding the vines directive to an attribute, you will process the value as an expression.
+
+he will talk about some security issues that may arise from doing this. The security risk I'm talking about is called cross site scriptiong(XSS), 
+It occurs when malicious or harmful HTML is injected into the web page, causing unintended behaviour in the application. This usually happens when you output HTML from an external data source.
+
+Your data will most likely come from an external source such as a database or API
+
+if those sources are compromised, your application will most likely face issues to. Before we go any deeper into this topic, let's learn how to output raw HTML, previously we inserted alink into the template with Namiki URL. Let's recreate this.
+If you're developing on the back end, make sure you're sanitizing and escaping any HTML that goes in and out, our dury as front end developers is to escape characters. View helps us with that. secondly, make sure you trust the source of your data.
