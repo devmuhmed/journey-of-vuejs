@@ -11,8 +11,12 @@
     <label>
       <input type="checkbox" v-model="isPurple"/> Purple
     </label>
-
-    <div class="circle" :class="circleClass">
+    <select v-model="selectColor">
+      <option value="">white</option>
+      <option value="text-black">black</option>
+      <option value="text-orange">orange</option>
+    </select>
+    <div class="circle" :class="[circleClass, selectColor]">
       Hi!
     </div>
   </div>
