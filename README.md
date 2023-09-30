@@ -125,3 +125,6 @@ ify you have function that calculates avalue , you would use a computed property
 
 with method you allowed to calculate values we can use them in expressions if we want to however you would lose out the 
 performance game that computed properties provide methods, provide a lot of flexibility you can make request update elements, etc. with computed properties they serve one purpose or at least they should, and that is to calculate a value unlike methods, you are always expected to return a value you're free to take other actions, but you must always return a value this is because the value is what's stored in vue
+
+computed properties can never be asynchronous, or at least they shouldn't be You expect the value to be returned from the 
+computed properties function However, watchers don't bear that responsibility. you have the freedom to perform asynchronous tasks
