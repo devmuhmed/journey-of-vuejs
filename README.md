@@ -99,3 +99,12 @@ otherwise, these two do the exact same thing.
 he recommend using the v-model directive whenever possible because it means writing less code.
 
 Event modifiers can be used by used by adding a dot after the event name this dot is followed by the modifier this dot is followed by the modifier you'd like to use. I want to stop the default behavior of the event vue comes with an event modifier called prevent.
+
+The browser will continue to convert the type to a string we can convert the 
+type back to a number by using a modifier. The v-model directive can use three modifiers
+one of them is called number
+v-model.number : will perform a type conversion, the value will be converted to anumber type
+This behavior can prevent unexpected issues when trying perform calculations
+v-model also has two modifiers lazy and trim 
+v-model.trim : will remove excessive white space from a value. It's equivalent of calling the trim function on a string.
+v-model : will change when the data property is updated. Normally, the data property in our application is updated on every key press The lazy modifier will delay the change until the vistor has finished typing in the input and moves away from it. It can be usefull if you want to perform less updates on the document   

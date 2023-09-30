@@ -13,17 +13,20 @@
         <p><a v-bind:href="url" target="_blank">Google</a></p>
         <!-- <p> {{ raw_url }}</p> => not work  -->
         <p v-html="raw_url"></p>
-        <p>{{ age }}</p>
+        <p>{{ typeof age }}</p>
         <hr>
         
         <label for="first-name">First Name</label>
-        <input type="text" id="first-name" v-model="firstName">
+        <input type="text" id="first-name" v-model.lazy.trim="firstName">
         
         <label for="middle-name">Middle Name</label>
         <input type="text" id="middle-name" @keyup.enter="updateMiddleName">
         
         <label for="last-name">Last Name</label>
         <input type="text" id="last-name"  :value="lastName" @input.prevent="updateLastName('last name event triggered!', $event)">
+
+        <label for="age">Age</label>
+        <input type="text" id="age" v-model.number="age">
         <button type="button" v-on:click="increment">Increment</button>
         <button type="button" @click.ctrl="age--">Decrement</button>
     </div>
