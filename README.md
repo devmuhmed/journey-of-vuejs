@@ -108,3 +108,20 @@ This behavior can prevent unexpected issues when trying perform calculations
 v-model also has two modifiers lazy and trim 
 v-model.trim : will remove excessive white space from a value. It's equivalent of calling the trim function on a string.
 v-model : will change when the data property is updated. Normally, the data property in our application is updated on every key press The lazy modifier will delay the change until the vistor has finished typing in the input and moves away from it. It can be usefull if you want to perform less updates on the document   
+
+compute simply it means to calculate something this can be any sort of calculation from basic math to concatenating strings to form a full word phrase or sentence.
+vue treats your computed properties as data. vue will cach the values of computed properties.
+
+Let's discuss when a data property is updated 
+    -It'll scan the function of the computed property
+    -It'll check what data properties you're using inside the function 
+    -If any of those values change, vue will rerun the function and update the value
+    -If a data property was updated that wasn't used inside the function 
+    -you will not bother updating the value  
+computed property : is acompination of method and data 
+the data property is used to store single values it can store object and arrays as well it's not the kind of object where you would store function 
+if you want to store functions you would use the methods property.
+ify you have function that calculates avalue , you would use a computed property.
+
+with method you allowed to calculate values we can use them in expressions if we want to however you would lose out the 
+performance game that computed properties provide methods, provide a lot of flexibility you can make request update elements, etc. with computed properties they serve one purpose or at least they should, and that is to calculate a value unlike methods, you are always expected to return a value you're free to take other actions, but you must always return a value this is because the value is what's stored in vue
