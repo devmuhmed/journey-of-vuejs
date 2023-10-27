@@ -8,10 +8,14 @@
 
 <body>
   <div id="app">
-    <button type="button" class="move">Move to Bottom</button>
-    <div class="card">
-      <h3>Name</h3>
-      <p>Message</p>
+    <button type="button" class="move" @click="moveToBottom">Move to Bottom</button>
+    <div class="card" v-for="person in people" :key="person.name"> <!-- we use key as an id 
+    without they key attribute vue will move the data around but not the elements themselves this process calls patching 
+    by adding the key attribute we're forcing the elements to move 
+    -->
+      <h3>{{ person.name }}</h3>
+      <p>{{ person.message }}</p>
+      <input type="text">
     </div>
   </div>
 

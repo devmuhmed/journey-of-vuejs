@@ -16,5 +16,12 @@ let vm = Vue.createApp({
         }
       ]
     }
+  },
+  methods: {
+    moveToBottom() {
+      // it will perform one simple task, it'll move the first item in array to the end
+      const first = this.people.shift()
+      this.people.push(first)
+    }
   }
 }).mount('#app')
