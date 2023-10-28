@@ -128,3 +128,13 @@ performance game that computed properties provide methods, provide a lot of flex
 
 computed properties can never be asynchronous, or at least they shouldn't be You expect the value to be returned from the 
 computed properties function However, watchers don't bear that responsibility. you have the freedom to perform asynchronous tasks
+</hr>
+<h2>prespective task </h2>
+    The first thing we'll do is create a vue instance. 
+    We need to tell vue what element in the document it will amount itself to. 
+    We'll call the vue create app function .
+    We'll pass in an empty configuration object will add some properties after mounting the application, after calling this function will change the mount's method
+    The Mount method requires we pass in a selector for the element we want to mount the application 
+    
+    Note
+        the navigator object is defined by the browser it'll contain various pieces of the information about the user's browser 
