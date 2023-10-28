@@ -138,3 +138,28 @@ computed properties function However, watchers don't bear that responsibility. y
     
     Note
         the navigator object is defined by the browser it'll contain various pieces of the information about the user's browser 
+<h2>Vue Lifecycle </h2>
+    It may begin The instance has to be created that's done using vue create app function 
+    this function is where you pass in your settings and data for vue to work with , During this process you will begin the life cycle
+    Vue will create areas within itself where we can inject code and do what ever we want
+    The very first thing Vue does is add reactivity to your data this process is where it being to watch your data for any changes
+    Before that happens, you have the opportunity to run some code 
+    The first life cycle hook that occurs is the before create hook, At this point the vue instance hasn't been fully created   
+    this means you won't have access to your data or any of its methods
+    Once everything has been initialized, the vue instance is ready we are provided another lifecycle hook, which is the created hook 
+    unlike before, we can access the data and method inside the vue instance 
+    However, vue is not mounted to any template, nor will anything be rendered onto the page
+    After the vue instance is created, it'll start looking for a template
+    This part of the lifecycle starts the moment we call the mount method on the application vue will scan the template code and begin processing it This process is what called compiling.
+    This is where you will scan for Directive's Expression's events and bindings inside the template 
+    One the template is compiled, Vue will replace the content inside the element we selected with the mount method, with the compiled template.
+    Before that happens, you have the opportunity to hook into the before mount life cycle Hook.
+    Once mounting is completed, you can hook into the mountain lif cycle hook.
+    At this point, view has inserted itself into the document we'll be able to see the rendered template on the document. All expressions, directives and bindings have been processed after the mountain phase is completed, your application will watch the data for any changes. This usually happens during events such as mouse clicks or inputs.
+    Any time the data has been updated, we will then update the template and the cycle just repeats 
+    we are provided to hooks during this process The first hook is the before update hook.
+    This gets triggered agter the data has been updated but has not been applied to the template.
+    The next hook is the updated hook this hook runs once the template is patched with the updated data 
+    <img src="tasks/img/vue_life_cycle .jpg">
+
+    we have the ability to destroy the vue instance this means that any reactivity, events, directives or bindings will be disabled and gone by calling method unmount
