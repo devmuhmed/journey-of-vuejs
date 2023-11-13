@@ -26,7 +26,11 @@ const app = Vue.createApp({
         return {
             title: 'my beautiful project 2',
             desc: 'this is my first vue project',
-            sections
+            sections,
+            link: {
+                name: "yes, go to devmuhmed",
+                url: "https://www.facebook.com/devmuhmed"
+            }
         }
     }
 })
