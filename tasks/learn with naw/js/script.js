@@ -32,6 +32,18 @@ const app = Vue.createApp({
                 url: "https://www.facebook.com/devmuhmed"
             },
             isDark: false,
+            count: 0,
+        }
+    },
+    methods: {
+        switchMode(){
+            this.isDark =! this.isDark
+        },
+        increment(){
+            this.count += 1
+        },
+        decrement(){
+            this.count -= 1;
         }
     }
 })
