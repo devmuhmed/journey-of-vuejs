@@ -31,3 +31,9 @@ h1,h3,p {
 .section-link:hover {
     padding: .4rem;
 }
+
+.dark {
+    background: #333;
+    color: #fff;
+    
+}

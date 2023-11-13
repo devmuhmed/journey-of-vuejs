@@ -10,22 +10,29 @@
     <header id="myid" class="header">
         <h1 class="header-heading"> {{ title }} </h1>
         <p class="header-desc"> {{ desc }} </p>
+        <!-- <button v-on:click="isDark =! isDark"> {{ isDark }} </button> -->
+        <button @click.prevent="isDark =! isDark"> {{ isDark ? "light" : "dark" }} </button>
     </header>
     
-    <section class="section" v-for="section in sections">
-        <h3>{{ section.title  }}</h3>
-        <p>{{ section.desc }}</p>
-    </section>
+    <!-- <main v-bind:class="isDark"> -->
+    <main :class="{dark: isDark}">
 
-    <section class="section">
-        <h3 class="section-heading">
-            Do you like it?
-        </h3>
-        <!-- <a class="seciton-link" v-bind:href="link.url" target="_blank"> -->
-            <a class="section-link" :href="link.url" target="_blank">
-            {{ link.name }}
-        </a>
-    </section>
+        <section class="section" v-for="section in sections">
+            <h3>{{ section.title  }}</h3>
+            <p>{{ section.desc }}</p>
+        </section>
+    
+        <section class="section">
+            <h3 class="section-heading">
+                Do you like it?
+            </h3>
+            <!-- <a class="seciton-link" v-bind:href="link.url" target="_blank"> -->
+                <a class="section-link" :href="link.url" target="_blank">
+                {{ link.name }}
+            </a>
+        </section>
+
+    </main>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="js/script.js"></script>
 </body>

@@ -30,7 +30,8 @@ const app = Vue.createApp({
             link: {
                 name: "yes, go to devmuhmed",
                 url: "https://www.facebook.com/devmuhmed"
-            }
+            },
+            isDark: false,
         }
     }
 })
