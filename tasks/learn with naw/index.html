@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn with Naw | simple project</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="myid" class="header">
+        <h1 class="header-heading"> {{ title }} </h1>
+        <p class="header-desc"> {{ desc }} </p>
+    </header>
+    <section class="section" v-for="section in sections">
+        <h3>{{ section.title  }}</h3>
+        <p>{{ section.desc }}</p>
+    </section>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
