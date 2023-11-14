@@ -24,7 +24,7 @@ const app = Vue.createApp({
     // data: function() {
         data() {
         return {
-            title: 'my beautiful project 2',
+            title: 'simple project',
             desc: 'this is my first vue project',
             sections,
             link: {
@@ -54,11 +54,17 @@ app.component('page-header', {
             <p class="header-desc"> {{ desc }} </p>
         </header>
     `,
-    data(){
-        return {
-            title:"our simple project",
-            desc:"Description for our simple project",
-        };
-    }
+    props: ['title', 'desc'],
 });
+
+app.component('page-section',{
+    template: `
+        <section class="section">
+            <h3>{{ title  }}</h3>
+            <p>{{ desc }}</p>
+        </section>
+    `,
+    props:['title', 'desc'],
+
+})
 app.mount('body');

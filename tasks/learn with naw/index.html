@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <page-header></page-header>
+    <page-header :title="title" :desc="desc"></page-header>
     <!-- <main v-bind:class="isDark"> -->
     <main :class="{dark: isDark}">
 
@@ -19,10 +19,12 @@
             <a class="section-link" @click.prevent="increment"> Increase </a> | <a class="section-link" @click.prevent="decrement">Decrease</a>
         </section>
     
-        <section class="section" v-for="section in sections">
-            <h3>{{ section.title  }}</h3>
-            <p>{{ section.desc }}</p>
-        </section>
+        <page-section
+            v-for="section in sections"
+            :key="section.id" 
+            :title="section.title" 
+            :desc="section.desc">
+        </page-section>
 
         <section class="section">
             <h3 class="section-heading">
