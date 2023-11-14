@@ -163,3 +163,8 @@ computed properties function However, watchers don't bear that responsibility. y
     <img src="tasks/img/vue_life_cycle .jpg">
 
     we have the ability to destroy the vue instance this means that any reactivity, events, directives or bindings will be disabled and gone by calling method unmount
+
+    vue cli 
+    npm install -g @vue/cli
+    vue create single-quote
+    cd single-quote
