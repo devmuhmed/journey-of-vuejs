@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header id="myid" class="header">
-        <h1 class="header-heading"> {{ title }} </h1>
-        <p class="header-desc"> {{ desc }} </p>
-        <!-- <button v-on:click="isDark =! isDark"> {{ isDark }} </button> -->
-        <button @click.prevent="switchMode"> {{ isDark ? "light" : "dark" }} </button>
-    </header>
     
+    <page-header></page-header>
     <!-- <main v-bind:class="isDark"> -->
     <main :class="{dark: isDark}">
+
+        <button @click.prevent="switchMode"> {{ isDark ? "light" : "dark" }} </button>
 
         <section class="section">
             <h3>The count is {{ count }}</h3>

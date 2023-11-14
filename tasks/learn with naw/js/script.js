@@ -47,5 +47,18 @@ const app = Vue.createApp({
         }
     }
 })
-
+app.component('page-header', {
+    template: `
+        <header id="myid" class="header">
+            <h1 class="header-heading"> {{ title }} </h1>
+            <p class="header-desc"> {{ desc }} </p>
+        </header>
+    `,
+    data(){
+        return {
+            title:"our simple project",
+            desc:"Description for our simple project",
+        };
+    }
+});
 app.mount('body');
