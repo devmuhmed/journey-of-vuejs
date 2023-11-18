@@ -1,20 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <page-header title = "myquotes" text="welcome to out website"></page-header>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import PageHeader from './components/PageHeader.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PageHeader
   }
 }
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 1rem;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
