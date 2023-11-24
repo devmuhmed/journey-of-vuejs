@@ -11,10 +11,8 @@
             <!-- <input class="form-input" type="color" id="color" name="color" value="" @input> -->
             <input class="form-input" type="color" id="color" name="color" v-model="userColor">
         </fieldset>
-        <div>
-            {{ userNumber }} | {{ userColor }} | {{ getAdvice }}
-        </div>
         <form-result :color="userColor" :advice="getAdvice"></form-result>
+        <form-result :color="userColor" :advice="adviceDataJson"></form-result>
     </form>
 </template>
 
@@ -40,11 +38,22 @@ export default {
             if(!advice) return "unlucky enough, no advice for you "
 
             return advice
+        },
+        adviceDataJson() {
+            const advice = this.dataJson.find(
+                // (advice,index) => index === this.userNumber
+                (a,i) => i === this.userNumber
+            )
+            // console.log(advice)
+            if(!advice) return "unlucky enough, no advice for you "
+    
+            return advice.adviceText
         }
     },
     components:{
         FormResult,
-    }
+    },
+    inject: ['dataJson']
 }
 </script>
 

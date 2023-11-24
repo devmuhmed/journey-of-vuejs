@@ -8,11 +8,22 @@
 <script>
 import PageHeader from './components/PageHeader.vue';
 import PageForm from './components/PageForm.vue';
+import dataJson from '../data.json'
 export default {
   name: 'App',
   components: {
     PageHeader,
     PageForm
+  },
+  provide() {
+    return {
+      dataJson: this.dataJson,
+    }
+  },
+  data() {
+    return {
+      dataJson
+    } 
   }
 }
 </script>
