@@ -2,14 +2,17 @@
   <page-header 
   title="Give me advice"
   text="Provide a number and get apiece of advice"></page-header>
+  <page-form></page-form>
 </template>
 
 <script>
 import PageHeader from './components/PageHeader.vue';
+import PageForm from './components/PageForm.vue';
 export default {
   name: 'App',
   components: {
-    PageHeader
+    PageHeader,
+    PageForm
   }
 }
 </script>
