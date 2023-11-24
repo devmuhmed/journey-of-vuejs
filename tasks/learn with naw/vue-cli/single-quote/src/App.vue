@@ -1,20 +1,28 @@
 <template>
     <page-header title = "myquotes" text="welcome to out website"></page-header>
     <div class="quotes">
-      <single-quote text="you can do it"></single-quote>
-      <single-quote text="you are good"></single-quote>
-      <single-quote text="well done"></single-quote>
+      <single-quote 
+      v-for="(quote, index) in quotes"
+      :key="index" 
+      :text="quote.quoteText"></single-quote>
     </div>
 </template>
 
 <script>
 import PageHeader from './components/PageHeader.vue'
 import SingleQuote from './components/SingleQuote.vue'
+import quotes from '../quotes.json'
+console.log(quotes)
 export default {
   name: 'App',
   components: {
     PageHeader,
-    SingleQuote
+    SingleQuote,
+  },
+  data(){
+    return {
+      quotes,
+    }
   }
 }
 </script>
@@ -38,5 +46,8 @@ h1, h2, h3, h4, h5, h6, p {
 .quotes {
   max-width: 80%;
   margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
 }
 </style>
