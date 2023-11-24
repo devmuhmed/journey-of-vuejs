@@ -12,7 +12,7 @@
             <input class="form-input" type="color" id="color" name="color" v-model="userColor">
         </fieldset>
         <div>
-            {{ userNumber }} | {{ userColor }}
+            {{ userNumber }} | {{ userColor }} | {{ getAdvice }}
         </div>
     </form>
 </template>
@@ -24,6 +24,20 @@ export default {
         return {
             userNumber: 5,
             userColor: '#000000',
+            advices: ["advice 1", "advice 2", "advice 3", "advice 4"]
+        }
+    },
+    computed: {
+        // not given argument will return specfic value
+        getAdvice(){
+            const advice = this.advices.find(
+                // (advice,index) => index === this.userNumber
+                (a,i) => i === this.userNumber
+            )
+            // console.log(advice)
+            if(!advice) return "unlucky enough, no advice for you "
+
+            return advice
         }
     }
 }
