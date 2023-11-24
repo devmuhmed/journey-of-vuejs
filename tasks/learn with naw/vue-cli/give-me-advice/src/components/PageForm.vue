@@ -2,21 +2,31 @@
     <form action="" class="form">
         <fieldset class="form-fieldset">
             <legend class="form-legend">Choose a number</legend>
-            <!-- <label for="number" class="form-label">Luck Number</label>
-            <input class="form-input" type="number" id="number" name="number"> -->
+            <label for="number" class="form-label">Luck Number</label>
+            <input class="form-input" type="number" id="number" name="number" v-model="userNumber">
         </fieldset>
         <fieldset class="form-fieldset">
             <legend class="form-legend">Text Color</legend>
-            <!-- <label for="color" class="form-label">Color</label>
-            <input class="form-input" type="color" id="color" name="color"> -->
+            <label for="color" class="form-label">Color</label>
+            <!-- <input class="form-input" type="color" id="color" name="color" value="" @input> -->
+            <input class="form-input" type="color" id="color" name="color" v-model="userColor">
         </fieldset>
+        <div>
+            {{ userNumber }} | {{ userColor }}
+        </div>
     </form>
 </template>
 
 <script>
 export default {
     name: 'PageForm',
-};
+    data(){
+        return {
+            userNumber: 5,
+            userColor: '#000000',
+        }
+    }
+}
 </script>
 
 <style scoped>
