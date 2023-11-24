@@ -14,10 +14,12 @@
         <div>
             {{ userNumber }} | {{ userColor }} | {{ getAdvice }}
         </div>
+        <form-result :color="userColor" :advice="getAdvice"></form-result>
     </form>
 </template>
 
 <script>
+import FormResult from './FormResult.vue'
 export default {
     name: 'PageForm',
     data(){
@@ -39,6 +41,9 @@ export default {
 
             return advice
         }
+    },
+    components:{
+        FormResult,
     }
 }
 </script>
