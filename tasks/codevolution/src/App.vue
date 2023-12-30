@@ -14,6 +14,15 @@
     new: !isSoldout,
     'sold-out': isSoldout
   }">Object conditional movie</h2>
+
+  <h2 :style="{
+    color: highlightColor,
+    fontSize: headerSize + 'px' //fontSize camel case or 'font-size': headerSize + 'px' kipap case 
+  }">Inline Style</h2>
+  
+  <h2 :style="headerStyleObject">Style Object</h2>
+  <h2 :style="[baseStyleObject, successStyleObject]">Success Style</h2>
+  <h2 :style="[baseStyleObject, dangerStyleObject]">Danger Style</h2>
 </template>
 
 <script>
@@ -31,6 +40,27 @@ export default {
       status: 'danger',
       isPromoted: true,
       isSoldout:true,
+      highlightColor: 'orange',
+      headerSize: 50,
+      headerStyleObject: {
+        color: 'orange',
+        fontSize: '50 px',
+        padding: '20 px',
+      },
+      baseStyleObject: {
+        fontSize: '50px',
+        padding: '10px',
+      },
+      successStyleObject: {
+        color: 'green',
+        backgroundColor: 'lightgreen',
+        border: '1px solid green', 
+      },
+      dangerStyleObject: {
+        color: 'darkred',
+        backgroundColor: 'red',
+        border: '1px solid darkred', 
+      },
     }
   }
 }
