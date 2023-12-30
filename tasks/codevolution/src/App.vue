@@ -1,5 +1,6 @@
 <template>
   {{ greet }} {{ name }}
+  <div v-text="channel"></div>
 </template>
 
 <script>
@@ -10,6 +11,7 @@ export default {
     return {
       greet: 'hello',
       name:'Mohamed',
+      channel: 'codevolution',
     }
   }
 }
