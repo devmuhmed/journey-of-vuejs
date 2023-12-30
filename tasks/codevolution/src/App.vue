@@ -1,5 +1,5 @@
 <template>
-  hello {{ name }}
+  {{ greet }} {{ name }}
 </template>
 
 <script>
@@ -8,6 +8,7 @@ export default {
   name: 'App',
   data() {
     return {
+      greet: 'hello',
       name:'Mohamed',
     }
   }
