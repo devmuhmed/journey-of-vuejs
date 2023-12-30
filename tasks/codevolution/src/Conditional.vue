@@ -16,6 +16,11 @@
         <h2>Ibrahim</h2>
         <h2>Hassan</h2>
     </div>
+    <!-- the display properity of css is toggling v-show recommended to use because it's not expensive dom cost  -->
+    <h2 v-show="showElement">using v-show</h2>
+    
+    <!-- v-if will mount the element in the dom and remove the element from the dom if it false  that's differance between v-show and v-if -->
+    <h2 v-if="showElement">using v-show</h2>
 </template>
 
 <script>
@@ -25,6 +30,7 @@ export default {
         return {
             num: 'helo',
             display: true,
+            showElement:false,
         }
     }
 }
