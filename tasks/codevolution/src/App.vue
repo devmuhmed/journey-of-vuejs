@@ -2,7 +2,7 @@
   {{ greet }} {{ name }}
   <div v-text="channel"></div>
   <div v-html="test"></div>
-  <h2 v-bind:id="HeadingId">Heading</h2>
+  <h2 :id="HeadingId">Heading</h2>
   <button :disabled="isDisabled">Bind</button>
   <h2 class="underline" :class="status">Status</h2>
   <h2 :class="isPromoted && 'promoted'">Promoted Movie</h2>
