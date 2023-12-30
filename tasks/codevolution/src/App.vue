@@ -2,6 +2,8 @@
   {{ greet }} {{ name }}
   <div v-text="channel"></div>
   <div v-html="test"></div>
+  <h2 v-bind:id="HeadingId">Heading</h2>
+  <button :disabled="isDisabled">Bind</button>
 
 </template>
 
@@ -14,7 +16,9 @@ export default {
       greet: 'hello',
       name:'Mohamed',
       channel: 'codevolution',
-      test: '<b>test</b>'
+      test: '<b>test</b>',
+      HeadingId: 'heading',
+      isDisabled: true,
     }
   }
 }
