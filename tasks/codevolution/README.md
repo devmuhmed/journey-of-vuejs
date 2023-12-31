@@ -30,5 +30,6 @@ ordering Src file Course
 4- List Rendering Conditional
 5- Methods
 6- Event Handling
-7- Form Handling
+7- Form Handling + modifier
+8- Bonus Directive
 

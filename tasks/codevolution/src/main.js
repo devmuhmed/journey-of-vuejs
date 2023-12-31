@@ -5,6 +5,7 @@ import { createApp } from 'vue'
 // import ListConditional from './ListRenderingConditional.vue'
 // import MethodApp from './Method.vue'
 // import EventHandling from './EventHandling.vue'
-import FormHandling from './FormHandling.vue'
+// import FormHandling from './FormHandling.vue'
+import BonusDirective from './BonusDirective.vue'
 
-createApp(FormHandling).mount('#app')
+createApp(BonusDirective).mount('#app')
