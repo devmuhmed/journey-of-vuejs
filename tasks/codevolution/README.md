@@ -32,4 +32,5 @@ ordering Src file Course
 6- Event Handling
 7- Form Handling + modifier
 8- Bonus Directive
+9- Computed Property
 

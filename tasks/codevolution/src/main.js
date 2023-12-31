@@ -6,6 +6,7 @@ import { createApp } from 'vue'
 // import MethodApp from './Method.vue'
 // import EventHandling from './EventHandling.vue'
 // import FormHandling from './FormHandling.vue'
-import BonusDirective from './BonusDirective.vue'
+// import BonusDirective from './BonusDirective.vue'
+import ComputedProperty from './ComputedProperty.vue'
 
-createApp(BonusDirective).mount('#app')
+createApp(ComputedProperty).mount('#app')
