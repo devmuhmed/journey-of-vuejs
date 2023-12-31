@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 // import App from './App.vue'
 // import ConditionalApp from './Conditional.vue'
 // import ListRendering from './ListRendering.vue'
-import ListConditional from './ListRenderingConditional.vue'
+// import ListConditional from './ListRenderingConditional.vue'
+import MethodApp from './Method.vue'
 
-createApp(ListConditional).mount('#app')
+createApp(MethodApp).mount('#app')
