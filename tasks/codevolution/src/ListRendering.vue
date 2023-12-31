@@ -17,7 +17,7 @@
 
 <script>
 export default {
-    name: 'ListTendering',
+    name: 'ListRendering',
     data() {
         return {
             names: ['Mohamed', 'Ibrahim', 'Hassan'],
