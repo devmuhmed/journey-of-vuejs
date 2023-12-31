@@ -8,6 +8,7 @@ import { createApp } from 'vue'
 // import FormHandling from './FormHandling.vue'
 // import BonusDirective from './BonusDirective.vue'
 // import ComputedProperty from './ComputedProperty.vue'
-import WatcherApp from './Watcher.vue'
+// import WatcherApp from './Watcher.vue'
+import App from './AppTwo.vue'
 
-createApp(WatcherApp).mount('#app')
+createApp(App).mount('#app')
