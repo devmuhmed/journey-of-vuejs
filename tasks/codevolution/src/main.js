@@ -4,6 +4,7 @@ import { createApp } from 'vue'
 // import ListRendering from './ListRendering.vue'
 // import ListConditional from './ListRenderingConditional.vue'
 // import MethodApp from './Method.vue'
-import EventHandling from './EventHandling.vue'
+// import EventHandling from './EventHandling.vue'
+import FormHandling from './FormHandling.vue'
 
-createApp(EventHandling).mount('#app')
+createApp(FormHandling).mount('#app')
