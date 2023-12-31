@@ -1,5 +1,9 @@
 <template>
     <greet-app></greet-app>
+    <greet-app name="Bruce" heroName="Batman"/>
+    <greet-app name="Clark" hero-name="Superman"/>
+    <greet-app name="Diana" hero-name="Wonder Woman"/>
+    <greet-app :name="name" :hero-name="channel"/>
   </template>
   
   <script>
@@ -12,6 +16,8 @@
     },
     data() {
       return {
+        name: 'mohamed',
+        channel: 'GoodHassan'
        }
     }
   }
