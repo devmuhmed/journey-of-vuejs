@@ -1,13 +1,12 @@
 <template>
     <h2>{{ name }}</h2>
     <div>
-        <button @click="name = 'batman'">Change Name</button>
-        <button @mouseover="name = 'Hello'">Change Name</button>
+        <button @click="changeName($event), increment(1,$event)">Change Name</button>
     </div>
 
     <h2>{{ count }}</h2>
     <div>
-        <button @click="increment(1)">Increment 1</button>
+        <button @click="increment(1,$event)">Increment 1</button>
         <button @click="increment(5)">Increment 5</button>
         <button @click="decrement(1)">decrement 1</button>
         <button @click="decrement(5)">decrement 5</button>
@@ -25,8 +24,13 @@ export default {
         }
     },
     methods: {  
-        increment(num){
+        changeName(event) {
+            this.name = 'batman'
+            console.log('Event',event);
+        },
+        increment(num,event){
             this.count += num
+            console.log('Event',event)
         },
         decrement(num){
             this.count -= num
