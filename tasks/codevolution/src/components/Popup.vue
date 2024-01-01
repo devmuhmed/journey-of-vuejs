@@ -9,7 +9,15 @@
 <script>
     export default {
         name: 'PopUp',
-        emits:['close'],
+        emits:{
+            close: (name) => {
+                if (!name) {
+                    return false
+                } else {
+                    return true
+                }
+            },
+        },
         data() {
             return {
                 name: ''
