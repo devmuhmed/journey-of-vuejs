@@ -1,13 +1,12 @@
 <template>
     <div class="card">
-        {{ content }}
+        <slot>Default Content</slot>
     </div>
 </template>
 
 <script>
     export default {
         name: 'CardComponent',
-        props:['content']
     }
 </script>
 

@@ -1,9 +1,20 @@
 <template>
     <!-- <input type="text" v-model="name"> -->
     <input-component v-model="name"/>
-    <card-component content="Card Content 1"/>
-    <card-component content="Card Content 2"/>
+    <!-- <card-component content="Card Content 1"/>
+    <card-component content="Card Content 2"/> -->
+    <card-component></card-component>
+    <card-component>
+        Card Content
+    </card-component>
+    <card-component>
+        <h2>Card Content</h2>
+    </card-component>
+    <card-component>
+        <img src="https://picsum.photos/200">
+    </card-component>
     
+
 
 </template>
 
