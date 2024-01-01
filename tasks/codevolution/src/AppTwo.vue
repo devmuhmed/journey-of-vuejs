@@ -6,7 +6,7 @@
     <greet-app :name="name" :hero-name="channel"/>
     <!-- <article-app/> -->
     <!-- <article-app title="Article Title" :likes="50" :isPublished="true"/> -->
-    <article-app title="article title" :likes="50" :isPublished="true"/>
+    <article-app id="my-article" title="article title" :likes="50" :isPublished="true"/>
   </template>
   
   <script>
