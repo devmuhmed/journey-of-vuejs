@@ -9,6 +9,7 @@ import { createApp } from 'vue'
 // import BonusDirective from './BonusDirective.vue'
 // import ComputedProperty from './ComputedProperty.vue'
 // import WatcherApp from './Watcher.vue'
-import App from './AppThree.vue'
+// import App from './AppThree.vue'
+import App from './AppFour.vue'
 
 createApp(App).mount('#app')
