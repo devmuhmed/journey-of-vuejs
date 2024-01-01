@@ -4,15 +4,19 @@
     <greet-app name="Clark" hero-name="Superman"/>
     <greet-app name="Diana" hero-name="Wonder Woman"/>
     <greet-app :name="name" :hero-name="channel"/>
+    <!-- <article-app/> -->
+    <!-- <article-app title="Article Title" :likes="50" :isPublished="true"/> -->
+    <article-app title="article title" :likes="50" :isPublished="true"/>
   </template>
   
   <script>
   import GreetApp from './components/Greet.vue'
-  
+  import ArticleApp from './components/Article.vue'
   export default {
     name: 'App',
     components: {
         GreetApp,
+        ArticleApp,
     },
     data() {
       return {
