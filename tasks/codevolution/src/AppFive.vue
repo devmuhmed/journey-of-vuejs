@@ -1,14 +1,20 @@
 <template>
     <!-- <input type="text" v-model="name"> -->
     <input-component v-model="name"/>
+    <card-component content="Card Content 1"/>
+    <card-component content="Card Content 2"/>
+    
+
 </template>
 
 <script>
+    import CardComponent from './components/Card.vue';
     import InputComponent from './components/input.vue'
     export default {
         name: 'App',
         components: {
-            InputComponent
+            InputComponent,
+            CardComponent
         },
         data() {
             return {
