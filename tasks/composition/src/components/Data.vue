@@ -2,6 +2,7 @@
     <div>
         <h2>Options - {{ o_firstName }}</h2>
         <h2>Options - {{ c_firstName }}</h2>
+        <h2>Options - {{ greet }}</h2>
     </div>
 </template>
 
@@ -11,8 +12,11 @@ import { ref } from 'vue'
         name: 'DataComponent  ',
         setup() {
            const c_firstName = ref('Clark')
+           c_firstName.value = 'Hassan'
+           const greet = `Hello ${c_firstName.value}`
            return {
-            c_firstName
+            c_firstName,
+            greet
            }
         },
         data() {
