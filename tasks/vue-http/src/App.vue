@@ -1,13 +1,16 @@
 <template>
   <post-list></post-list>
+  <create-post></create-post>
 </template>
 
 <script>
 import PostList from './components/PostComponent.vue'
+import CreatePost from './components/CreatePost.vue'
 export default {
   name: 'App',
   components: {
     PostList,
+    CreatePost,
   }
 }
 </script>
