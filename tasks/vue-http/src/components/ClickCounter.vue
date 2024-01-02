@@ -1,23 +1,15 @@
 <template>
     <div>
-        <button @click="increamentCount">Clicked {{ count }} times</button>
+        <button @click="incrementCount">Clicked {{ count }} times</button>
     </div>
 </template>
 
 <script>
+    import CounterMixin from '../mixins/counter'
     export default {
         name: 'ClickCounter',
-        data() {
-            return {
-                count: 0
-            }
-        },
-        methods: {
-            increamentCount()
-            {
-                this.count += 1
-            }
-        }
+        mixins:[CounterMixin]
+        
     }
 </script>
 

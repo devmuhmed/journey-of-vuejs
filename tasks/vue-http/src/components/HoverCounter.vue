@@ -1,23 +1,14 @@
 <template>
     <div>
-        <h2 @mouseover="increamentCount">Hovered {{ count }} times</h2>
+        <h2 @mouseover="incrementCount">Hovered {{ count }} times</h2>
     </div>
 </template>
 
 <script>
+    import CounterMixin from '../mixins/counter'
     export default {
         name: 'HoverCounter',
-        data() {
-            return {
-                count: 0
-            }
-        },
-        methods: {
-            increamentCount()
-            {
-                this.count += 1
-            }
-        }
+        mixins: [CounterMixin]
     }
 </script>
 
