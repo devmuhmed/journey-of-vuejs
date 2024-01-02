@@ -25,21 +25,37 @@
             <button>View Details</button>
         </template>
     </card-component>
-    
+    <name-list>
+        <!-- slotProps represent all object of the children -->
+       <template v-slot:default="slotProps">
+            {{ slotProps.firstName }} {{ slotProps.lastName }}
+       </template> 
+    </name-list>
+    <name-list>
+       <template v-slot:default="slotProps">
+            {{ slotProps.firstName }}, {{ slotProps.lastName }}
+       </template> 
+    </name-list>
+    <name-list>
+       <template v-slot:default="slotProps">
+            {{ slotProps.firstName }}
+       </template> 
+    </name-list>
 </template>
 
 <script>
+    import NameList from './components/NameList.vue';
     import CardComponent from './components/Card.vue';
     import InputComponent from './components/input.vue'
     export default {
         name: 'App',
         components: {
             InputComponent,
-            CardComponent
+            CardComponent,
+            NameList
         },
         data() {
             return {
-                name: ''
             }
         },
     }
