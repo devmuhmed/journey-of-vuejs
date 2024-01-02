@@ -12,6 +12,7 @@ import { createApp } from 'vue'
 // import App from './AppThree.vue'
 // import App from './AppFour.vue'
 // import App from './AppFive.vue'
-import App from './AppSix.vue'
+// import App from './AppSix.vue'
+import App from './DynamicComponent.vue'
 
 createApp(App).mount('#app')
