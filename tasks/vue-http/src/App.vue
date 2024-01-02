@@ -1,9 +1,11 @@
 <template>
+  <template-ref> </template-ref>
   <post-list></post-list>
   <create-post></create-post>
 </template>
 
 <script>
+import TemplateRef from './components/TemplateRef.vue';
 import PostList from './components/PostList.vue'
 import CreatePost from './components/CreatePost.vue'
 export default {
@@ -11,6 +13,7 @@ export default {
   components: {
     PostList,
     CreatePost,
+    TemplateRef,
   }
 }
 </script>
