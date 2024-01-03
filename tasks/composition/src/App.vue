@@ -1,19 +1,21 @@
 <template>
-  <demo-one />
-  <demo-two/>
+  <method-component/>
+  <!-- <demo-one />
+  <demo-two/> -->
   <!-- <data-component/> -->
 </template>
 
 <script>
-import DemoOne from './components/DemoOne.vue';
-import DemoTwo from './components/DemoTwo.vue';
+// import DemoOne from './components/DemoOne.vue';
+// import DemoTwo from './components/DemoTwo.vue';
 // import DataComponent from './components/Data.vue'
-
+import MethodComponent from './components/Method.vue';
 export default {
   name: 'App',
   components: {
-    DemoOne,
-    DemoTwo
+    MethodComponent
+    // DemoOne,
+    // DemoTwo
     // DataComponent
   }
 }
