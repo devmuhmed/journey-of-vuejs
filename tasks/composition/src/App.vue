@@ -1,13 +1,16 @@
 <template>
-  <v-model/>
+
+  <!-- <v-model/> -->
   <!-- <method-component/> -->
   <!-- <demo-one />
   <demo-two/> -->
   <!-- <data-component/> -->
+  <computed-property/>
 </template>
 
 <script>
-import VModel from './components/VModel.vue';
+import ComputedProperty from './components/ComputedProperty.vue';
+// import VModel from './components/VModel.vue';
 // import DemoOne from './components/DemoOne.vue';
 // import DemoTwo from './components/DemoTwo.vue';
 // import DataComponent from './components/Data.vue'
@@ -15,7 +18,8 @@ import VModel from './components/VModel.vue';
 export default {
   name: 'App',
   components: {
-    VModel
+    ComputedProperty
+    // VModel
     // MethodComponent
     // DemoOne,
     // DemoTwo

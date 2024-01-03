@@ -13,7 +13,7 @@
 <script>
     import {ref, reactive, toRefs} from 'vue'
     export default {
-        name: 'VModer',
+        name: 'VModel',
         setup() {
             const heroName = ref('')
             const state = reactive({
