@@ -8,7 +8,17 @@
 <body>
     <h1>Hello Frontend Masters!</h1>
     <div id="app">
-        {{ message }}
+        <!-- v-if directive -->
+        <p v-if="message.length % 2 === 0">
+            Even: {{ message }}
+        </p>
+        <p v-else>
+            Odd: {{ message.toUpperCase() }}
+        </p>
+        <!-- show list render -->
+        <ul>
+            <li v-for="number in listOfNumbers"> {{ number * Math.random() }}</li>
+        </ul>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
@@ -17,7 +27,8 @@
         const app = createApp({
             data() {
                 return {
-                    message: 'Hello it works!'
+                    message: 'Hello it works!',
+                    listOfNumbers: [1, 2, 3, 4, 5]
                 }
             }
         })
