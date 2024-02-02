@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar: The last airbender</title>
+</head>
+<body>
+    <div id="app">
+      <p v-if="characterList.length === 0">There are no character</p>
+      <ul v-else>
+        <li v-for="character in characterList">
+            {{ character.name }}
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+       Vue.createApp({
+            data: ()=> ({
+                characterList: [
+                    {
+                        name: 'Aang',
+                    },
+
+                    {
+                        name: 'zuko',
+                    },
+
+                    {
+                        name: 'toph',
+                    },
+
+                    {
+                        name: 'katara',
+                    }
+
+                ]
+            })
+        }).mount('#app')
+    </script>
+</body>
+</html>
