@@ -9,8 +9,8 @@
     <h1>Hello Frontend Masters!</h1>
     <div id="app">
         <h1>Counter</h1>
-        <p>{{ count }}</p>
-        <button v-on:click="increamentCount">Increment Count</button>
+        <p :data-inecrement-by="increamentAmount">{{ count }}</p>
+        <button @click="increamentCount(10, $event)">Increment Count</button>
         <label for="increamentAmount">Increment by:</label>
         <input type="number" v-model="increamentAmount">
         <hr>
@@ -41,8 +41,10 @@
                 }
             },
             methods: {
-                increamentCount() {
+                increamentCount(newAmount, event) {
                     // this.$data.count
+                    console.log(newAmount)
+                    console.log(event)
                     this.count += this.increamentAmount
                 }
 
