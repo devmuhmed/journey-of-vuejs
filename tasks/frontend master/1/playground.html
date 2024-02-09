@@ -8,6 +8,13 @@
 <body>
     <h1>Hello Frontend Masters!</h1>
     <div id="app">
+        <h1>Counter</h1>
+        <p>{{ count }}</p>
+        <button v-on:click="increamentCount">Increment Count</button>
+        <label for="increamentAmount">Increment by:</label>
+        <input type="number" v-model="increamentAmount">
+        <hr>
+
         <!-- v-if directive -->
         <p v-if="message.length % 2 === 0">
             Even: {{ message }}
@@ -27,9 +34,18 @@
         const app = createApp({
             data() {
                 return {
+                    count: 10,
+                    increamentAmount: 80,
                     message: 'Hello it works!',
                     listOfNumbers: [1, 2, 3, 4, 5]
                 }
+            },
+            methods: {
+                increamentCount() {
+                    // this.$data.count
+                    this.count += this.increamentAmount
+                }
+
             }
         })
 
