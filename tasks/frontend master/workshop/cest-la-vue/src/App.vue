@@ -1,14 +1,16 @@
 <script>
 import HomePage from "./components/HomePage.vue";
 import LoginPage from "./components/LoginPage.vue";
+import UserPage from "./components/UserPage.vue";
 
 export default {
   components: {
     HomePage,
     LoginPage,
+    UserPage,
   },
   data: () => ({
-    currentPage: "Home",
+    currentPage: "User",
   }),
   computed:{
     renderPage() {
@@ -22,6 +24,9 @@ export default {
     showLoginPage() {
       this.currentPage = "Login";
     },
+    showUserPage() {
+      this.currentPage = "User";
+    },
   },
 };
 </script>
@@ -34,8 +39,11 @@ export default {
     <nav class="nav">
       <a href="#" @click.prevent="showHomePage">Home</a>
       <a href="#" @click.prevent="showLoginPage">Login</a>
+      <a href="#" @click.prevent="showUserPage">Login</a>
     </nav>
   </header>
+
+  <form @submit.prevent="submitRegistration"></form>
   <component :is="renderPage"/>
 </template>
 
