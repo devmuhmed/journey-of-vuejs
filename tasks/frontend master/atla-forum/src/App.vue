@@ -1,10 +1,12 @@
 <script>
     import BaseCounter from './components/BaseCounter.vue'
     import BenderStatistics from './components/BenderStatistics.vue'
+    import CharacterCard from './components/CharacterCard.vue'
   export default {
     components: {
         BaseCounter,   
         BenderStatistics,
+        CharacterCard
     },
             data: ()=> ({
                 newCharacter: {
@@ -37,8 +39,9 @@
             }),
             
             methods: {
-                favoriteCharacter(character) {
-                    this.favoriteList.push(character)
+                addFavoriteCharacter(payload) {
+                    console.log(payload)
+                    this.favoriteList.push(payload);
                 },
                 addNewCharacter() {
                     this.characterList.push(this.newCharacter)
@@ -55,10 +58,7 @@
     <p v-if="characterList.length === 0">There are no character</p>
     <ul v-else>
     <li v-for="(character, index) in characterList" :key="`even-character-${index}`">
-        <p>
-            {{ character.name }}
-        </p>
-        <button @click="favoriteCharacter(character)">⭐ Favorite</button>
+        <CharacterCard :character="character" @favorite="addFavoriteCharacter"/>
     </li>
     </ul>
     <h2>Favorite Characters</h2>
