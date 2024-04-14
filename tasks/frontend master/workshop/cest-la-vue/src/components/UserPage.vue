@@ -1,13 +1,23 @@
 <script>
-    import UserCard from "./UserCard.vue";
+import UserCard from './UserCard.vue'
+import { v4 as uuidv4 } from 'uuid'
 export default {
-    components:{
-        UserCard
-    },
+  components: {
+    UserCard
+  },
   data: () => ({
-    userList: []
+    userList: [],
+    newUser: {
+        name: 'mohamed',
+    }
   }),
   methods: {
+    addNewUser() {
+      this.userList.push({
+        ...this.newUser,
+        id: uuidv4()
+      })
+    },
     async fetchUsers() {
       this.userList = await fetch('https://jsonplaceholder.typicode.com/users').then((response) =>
         response.json()
@@ -24,8 +34,7 @@ export default {
   <main>
     <h1>Users</h1>
     <ul>
-        <UserCard v-for="user in userList" :user="user" :key="`user-${user.id}`"/>
-        
+      <UserCard v-for="user in userList" :user="user" :key="`user-${user.id}`" />
     </ul>
   </main>
 </template>
