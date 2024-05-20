@@ -13,15 +13,17 @@
 
 <script>
     export default {
-        data() {
+        setup(){
+            const transactions = [
+                {id:1 , text: 'Flower', amount: -19.99},
+                {id:1 , text: 'Salary', amount: 299.97},
+                {id:1 , text: 'Book', amount: -10},
+                {id:1 , text: 'Camera', amount: 150},
+            ];
+
             return {
-                transactions: [
-                    {id:1 , text: 'Flower', amount: -19.99},
-                    {id:1 , text: 'Salary', amount: 299.97},
-                    {id:1 , text: 'Book', amount: -10},
-                    {id:1 , text: 'Camera', amount: 150},
-                ],
-            };
-        },
+                transactions,
+            }
+        }
     }
 </script>
