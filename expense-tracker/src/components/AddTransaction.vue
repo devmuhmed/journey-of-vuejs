@@ -23,6 +23,7 @@
   const text = ref('')
   const amount = ref('')
   const toast = useToast();
+  const emit = defineEmits(['transactionSubmitted'])
   
   const onSubmit = () => {
     if(!text.value || !amount.value){
@@ -31,6 +32,12 @@
     }
     console.log("submit", text.value, amount.value, onSubmit);
 
+    const transactionData = {
+      text: text.value,
+      amount: parseFloat(amount.value)
+    }
+
+    emit('transactionSubmitted', transactionData)
     text.value = ''
     amount.value = ''
   }
